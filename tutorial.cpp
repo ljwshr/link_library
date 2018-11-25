@@ -28,7 +28,9 @@ int main(int argc, char* argv[])
   fprintf(stdout, "The square root of %g is %g\n", inputValue, outputValue);
   return 0;
 }
+/*
 int hardware::multiply_ten_times(int input){
 	int b =input;
 	return b*10;
 }
+*/

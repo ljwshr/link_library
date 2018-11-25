@@ -5,9 +5,12 @@ project (Tutorial)
 include_directories ("${PROJECT_BINARY_DIR}")
 
 include_directories ("${PROJECT_SOURCE_DIR}/MathFunctions")
-add_subdirectory (MathFunctions)
-set (EXTRA_LIBS ${EXTRA_LIBS} MathFunctions)
+#add_subdirectory (MathFunctions)
+#set (EXTRA_LIBS ${EXTRA_LIBS} MathFunctions)
 
 
 add_executable (Tutorial tutorial.cpp)
-target_link_libraries (Tutorial  ${EXTRA_LIBS})
+target_link_libraries (Tutorial  ${CMAKE_SOURCE_DIR}/MathFunctions/libMathFunctions.a)
+target_include_directories(Tutorial 
+	PUBLIC ${CMAKE_SOURCE_DIR}/support_files
+)
