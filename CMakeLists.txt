@@ -1,11 +1,5 @@
 cmake_minimum_required (VERSION 2.6)
 project (Tutorial)
-
-
-
-
-
-
 # add the binary tree to the search path for include files
 # so that we will find TutorialConfig.h
 include_directories ("${PROJECT_BINARY_DIR}")
@@ -15,5 +9,5 @@ add_subdirectory (MathFunctions)
 set (EXTRA_LIBS ${EXTRA_LIBS} MathFunctions)
 
 
-add_executable (Tutorial tutorial.cxx)
+add_executable (Tutorial tutorial.cpp)
 target_link_libraries (Tutorial  ${EXTRA_LIBS})

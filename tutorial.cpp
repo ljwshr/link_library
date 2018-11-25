@@ -6,6 +6,7 @@
 
 // include our own function
 #  include "MathFunctions.h"
+//#include "hardware.h"
 
 
 int main(int argc, char* argv[])
@@ -21,9 +22,13 @@ int main(int argc, char* argv[])
 
   if (inputValue >= 0) {
 	// use our own function
-    outputValue = mysqrt(inputValue);
+    outputValue = hardware::multiply_ten_times(inputValue);
   }
 
   fprintf(stdout, "The square root of %g is %g\n", inputValue, outputValue);
   return 0;
+}
+int hardware::multiply_ten_times(int input){
+	int b =input;
+	return b*10;
 }
